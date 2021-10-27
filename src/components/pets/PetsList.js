@@ -1,3 +1,5 @@
+import PetsListNav from "./PetsListNav";
+import Pet from "./Pet";
 import "./PetsList.css";
 
 export const PetsList = ({ pets }) => {
@@ -9,30 +11,19 @@ export const PetsList = ({ pets }) => {
     },
     [[], []]
   );
+
   return (
     <section className="pets-wrapper">
-      <nav className="pets-nav">
-        <ul>
-          <li>
-            <a href="/pets/cats">See All Cats ({cats.length})</a>
-          </li>
-          <li>
-            <a href="/pets/dogs">See All Dogs ({dogs.length})</a>
-          </li>
-        </ul>
-      </nav>
+      <PetsListNav cats={cats} dogs={dogs} />
       <section className="pets-list">
-        {/* All cats view. */}
+        {/* All cats section */}
         {cats.map((cat) => (
-          <article key={cat.id}>
-            <h3>🐈 {cat.name}</h3>
-          </article>
+          <Pet key={cat.id} kind="cat" pet={cat} />
         ))}
-        {/* All dogs view. */}
+
+        {/* All dogs section */}
         {dogs.map((dog) => (
-          <article key={dog.id}>
-            <h3>🐕 {dog.name}</h3>
-          </article>
+          <Pet key={dog.id} kind="dog" pet={dog} />
         ))}
       </section>
     </section>
