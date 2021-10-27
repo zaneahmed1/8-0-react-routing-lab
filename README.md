@@ -44,7 +44,9 @@ Keep the following in mind for this lab as you run the tests.
 
 ## Instructions
 
-The general functionality of the page already exists. However, you will need to add routing for the page. To complete this lab, you will need to create the following routes:
+The general functionality of the page already exists. Unfortunately, the contents of three different pages are all dumped on the main page!
+
+You will need to add routing for the page. To complete this lab, you will need to create the following routes:
 
 - `/`: When going to the index, you should see the `Home` component, alongside the `Nav` and `Footer`.
 - `/staff`: When going to the Staff page route, you should see the `StaffList` component, alongside the `Nav` and `Footer`.
@@ -56,6 +58,8 @@ Additionally, the following links and buttons should have some effects.
 
 - The `Nav` contains three links. Update the links so that they work with React router.
 - The `PetsList` contains two links: "See All Cats" and "See All Dogs". Clicking either link should send the person to the appropriate route and change the displayed list.
+
+By doing the above, all of the tests should pass as opposed to just a few.
 
 ### Data for this lab
 
