@@ -1,11 +1,11 @@
 export const Staffer = ({ employee }) => {
-  const { id, firstName, lastName, prefix, postfix, title } = employee;
+  const { firstName, lastName, prefix, postfix, title } = employee;
   let name = `${firstName} ${lastName}`;
   if (prefix) name = `${prefix} ${name}`;
   if (postfix) name = `${name}, ${postfix}`;
 
   return (
-    <article key={id} class="staffer">
+    <article className="staffer">
       <h3>{name}</h3>
       <h4>{title}</h4>
     </article>
