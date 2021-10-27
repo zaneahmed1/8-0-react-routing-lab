@@ -2,7 +2,7 @@
 
 In this lab you will add routing to an animal hospital's website using React Router.
 
-![Example of a completed application.](./assets/example.png)
+![Example of a completed application.](./assets/landing-page.png)
 
 ---
 
