@@ -1,5 +1,6 @@
+import "./Highlights.css";
+
 export const Highlights = ({ employees, owners, pets }) => {
-  console.log(employees, owners, pets);
   return (
     <section className="highlights">
       <article>

@@ -1,3 +1,5 @@
+import "./NewsletterForm.css";
+
 export const NewsletterForm = () => {
   return (
     <section className="signup">
