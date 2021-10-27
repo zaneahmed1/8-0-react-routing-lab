@@ -7,7 +7,7 @@ describe("index", () => {
 
   it("should have links in the navigation bar", () => {
     cy.react("Nav").should("exist");
-    cy.get("header a").should("have.length", 3);
+    cy.react("Nav Link").should("have.length", 3);
   });
 
   it("should go to the staff page when that link is clicked", () => {
