@@ -57,6 +57,9 @@ You will need to add routing for the page. To complete this lab, you will need t
 Additionally, the following links and buttons should have some effects.
 
 - The `Nav` contains three links. Update the links so that they work with React router.
+  - `Northwest Animal Hospital` - should link to `/`
+  - `All Staff` - should link to `/staff`
+  - `All Pets` - should link to `/pets`
 - The `PetsList` contains two links: "See All Cats" and "See All Dogs". Clicking either link should send the person to the appropriate route and change the displayed list.
 
 By doing the above, all of the tests should pass as opposed to just a few.
@@ -67,6 +70,20 @@ There are no API calls in this Lab. This is so that you can focus on routing as 
 
 All of the data is contained inside of the `src/data` folder and is imported inside of `App.js`.
 
+### Views
+
+`/staff`
+
+![staff page](./assets/staff-page.png)
+
+`/cats`
+
+![cats page](./assets/cats-page.png)
+
+`/dogs`
+
+![dogs page](./assets/dogs-page.png)
+
 ### Tips
 
 The following tips may help you as you're working on this project:
@@ -74,8 +91,26 @@ The following tips may help you as you're working on this project:
 - Remember that you will need to import React Router-specific elements by importing from `"react-router-dom"`.
 - Remember that `a` elements should not be used with React Router. Instead, use [`Link` components](https://reactrouter.com/web/api/Link).
 - The `/pets` page allows for a _nested view._ The sidebar with the links to see all cats and dogs should remain on the page while the inner piece of the page should change depending on the route.
-- To redirect the user to a new page, the [`Redirect` component](https://reactrouter.com/web/api/Redirect) might be of use.
 
 ---
 
 Photo by <a href="https://unsplash.com/@sita2?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrew S</a> on <a href="https://unsplash.com/s/photos/pets?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+### Stretch
+
+- Work on styling
+
+  - Create a sticky footer: No matter the height of the rest of the elements the footer is always, at minimum, at the bottom or below.
+  - Make the pages responsive
+
+- Make a 404 page
+
+  - if someone goes to`/pets/birds` it goes to a custom `Not Found` view
+
+- Create a new page `New Pet` - that has a form that will allow you to add a new pet and see it appear in one of the lists
+
+- Create a new pagew `New Staff` that has a form that will allow you to add a new staff memeber and see it appear in the staff list
+
+- Make pages and views for owners (look at the `data` in the `data` folder in `/src`)
+
+- Allow sorting of dog/cats by name or breed
