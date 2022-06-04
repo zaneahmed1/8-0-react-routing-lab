@@ -17,29 +17,35 @@ import PetsList from "./components/pets/PetsList";
 import { employees } from "./data/employees.js";
 import { owners } from "./data/owners";
 import { pets } from "./data/pets";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      employees,
-      owners,
-      pets,
-    };
-  }
+function App() {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     employees,
+  //     owners,
+  //     pets,
+  //   };
+  // }
 
-  render() {
-    const { employees, owners, pets } = this.state;
-    return (
-      <div className="wrapper">
+  // const { employees, owners, pets } = this.state;
+  return (
+    <div className="wrapper">
+      <Router>
         <Nav />
-        <Home employees={employees} owners={owners} pets={pets} />
-        <StaffList employees={employees} />
-        <PetsList pets={pets} />
+        <Routes>
+          <Route
+            path="/"
+            element={<Home employees={employees} owners={owners} pets={pets} />}
+          />
+          <Route path="/pets/*" element={<PetsList pets={pets} />} />
+          <Route path="/staff" element={<StaffList employees={employees} />} />
+        </Routes>
         <Footer />
-      </div>
-    );
-  }
+      </Router>
+    </div>
+  );
 }
 
 export default App;
