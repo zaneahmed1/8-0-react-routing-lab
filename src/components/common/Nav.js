@@ -5,7 +5,7 @@ export const Nav = () => {
   return (
     <header>
       <article>
-        <Link to="/">
+        <Link to="/" className="navLink">
         <h1>
             Northwest <span>Animal Hospital</span>
         </h1>
@@ -13,12 +13,12 @@ export const Nav = () => {
       </article>
       <aside>
         <ul>
-          <Link to="/staff">
+          <Link to="/staff" className="navLink">
           <li>
             All Staff
           </li>
           </Link>
-          <Link to="/pets">
+          <Link to="/pets" className="navLink">
           <li>
             All Pets
           </li>

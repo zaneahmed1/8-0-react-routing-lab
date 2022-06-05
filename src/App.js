@@ -8,6 +8,8 @@ import Footer from "./components/common/Footer";
 import Home from "./components/home/Home";
 import StaffList from "./components/staff/StaffList";
 import PetsList from "./components/pets/PetsList";
+import NotFound from "./components/NotFound";
+import NewPetForm from "./components/NewPetForm";
 
 /*
   Data
@@ -41,6 +43,8 @@ function App() {
           />
           <Route path="/pets/*" element={<PetsList pets={pets} />} />
           <Route path="/staff" element={<StaffList employees={employees} />} />
+          <Route path="/newpetform" element={<NewPetForm/>}/>
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
         <Footer />
       </Router>

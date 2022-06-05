@@ -1,4 +1,5 @@
 import "./PetsListNav.css";
+import {Link} from "react-router-dom"
 
 export const PetsListNav = ({ cats, dogs }) => {
   return (
@@ -9,6 +10,9 @@ export const PetsListNav = ({ cats, dogs }) => {
         </li>
         <li>
           <a href="/pets/dogs">See All Dogs ({dogs.length})</a>
+        </li>
+        <li>
+          <Link to="/newpetform">Add New Pet</Link>
         </li>
       </ul>
     </nav>
